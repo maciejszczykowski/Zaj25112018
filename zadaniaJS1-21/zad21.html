@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script>
+        window.onload = function(){ //lista kompetencji do podniesienia
+           var toDos = ["TypeScript", "HTML5", "JQuery", "BOOTSTRAP"];
+           //alert(toDos[2]); //jQuery
+           /*toDos[1] = "Xamarin"; //zmiana
+           toDos.push("AngularJS"); //dodanie
+           toDos.splice(1,1); //usuń od 1 indeksu 1 element
+           alert(toDos.sort());*/
+           
+           var clone = toDos.slice(); //klonowanie tablicy
+           clone[0] = "JavaScript";
+
+           alert(toDos); //sklonowanie tablicy
+        };    
+    </script>
+</head>
+
+<body>
+    <input id="tToDo" type="text" />
+    <p id="pResult">
+
+    </p>
+</body>
+</html>
