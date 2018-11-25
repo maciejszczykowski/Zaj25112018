@@ -1,0 +1,9 @@
+zad 21_2,3,4 -  DOM document object model robilismy
+zad 21_5, - robimy BOM browser object model
+21_5 np szerokosc ekranu
+
+21_7 cookies. nie działa. 
+pan byl taki, aby to co wpiszemy w okienko pojawilo sie 
+po zamknieciu przegladarki znowu w tym punkcie po ponownym otwarciu
+
+pobrane mialo zostac z cookies. 

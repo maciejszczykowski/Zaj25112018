@@ -1,0 +1,59 @@
+<html>
+
+<head>
+
+    <style>
+       
+    </style>
+    <script>
+
+        // ZATRZYMANIE CZASU na samym dole
+
+
+            //BOM
+            //w zbadaj-console w przegladarce pojawi sie szerokosc ekranu
+            //window on resize bedzie pokazywal jak zmieniamy szer na biezaco
+            
+            //window.onresize = function(){
+            //    console.log(window.innerWidth);
+          //  };
+            // otworzy nam inna strone 
+              //  window.open("http://wsb.pl", "_blank");
+
+                //window location assign przekierowuje na inna strone
+              //  console.log(window.location.href);
+              //  window.location.assign ("http://wp.pl");
+
+
+                    //w konsoli mozemy sprawdzac poniższe, np sprawdzamy, ze uzywa IE11 to przekireujemy na strone ktora to obslugije, tak samo z mobilnymi mozna sprawdzic ale nie napisalem tu
+              // console.log(navigator.appVersion);
+            //  console.log(navigator.userAgent);
+            //  console.log(navigator.language);
+
+             //sprawdza i poda czas co 1 sek 
+             
+
+             
+             var interval;
+
+            window.onload = function (){
+             interval =setInterval(function() {
+        document.getElementById("pTime").innerHTML = new Date(). toLocaleString("pl-PL");
+         }, 1000); //kod wywolywany co 1 sek
+};
+    function stopTime() {
+
+
+         clearInterval(interval);
+     
+}
+    </script>
+</head>
+
+<body>
+<p id="pTime"></p>
+<button onclick="stopTime()">Zatrzymaj</button>
+
+
+</body>
+</html>

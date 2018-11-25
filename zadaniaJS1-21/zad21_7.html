@@ -6,18 +6,28 @@
        
     </style>
     <script>
+        // Ciasteczka, nie dziala cos mi, w konsoli powinny sie zapisywac
 
         //robimy liste z tego co wpiszemy w okienko add new todo
         window.onload = function(){ //lista kompetencji do podniesienia
+
+          console.log(document.cookie); //pobrane ciasteczka
+          
+
         var tNewTodo = document.getElementById("tTodo");
         var tSearchTodos = document.getElementById("tSearchToDos");
         var olTodos = document.getElementById("olTodos");
             //jak klikniemy enter w add new todo -> to w alercie wyjdzie to co napisalismy
             tNewTodo.onkeyup = function(event) {
                if(event.keyCode ==13) { //kazdy klawisz na klawiaturze ma swoj kod liczbowy, www.keycode.info (13 to enter)
-            
-            
+           
+            //NOWE, ciasteczka
+                var cookieDate = new Date();
+                cookieDate.setDate.setMonth(cookieDate.getMonth()+ 1);
+                document.cookie= "searchTodos" + tSearchTodos.value + "; expires=" + cookieDate.toUTCString();
                
+}
+
               var newTodo = tNewTodo.value;
               var liNewTodo = document.createElement("li");
               var textNodeNewTodo = document.createTextNode(newTodo);
@@ -34,12 +44,9 @@
              liNewTodo.appendChild(btnDeleteTodo);
               
               liNewTodo.appendChild(textNodeNewTodo);
-              olTodos.appendChild(liNewTodo);
-
-
-                                                     
+              olTodos.appendChild(liNewTodo);                                             
 };
-        };    
+      
         function deleteTodo(liTodo) { //przekazanie przez referencje
             document.getElementById("olTodos").removeChild(liTodo);
 
