@@ -1,0 +1,65 @@
+<html>
+
+<head>
+
+    <style>
+        .highlight-green{
+            color: green;
+            font-weight: 900;
+        }
+    
+    </style>
+
+    
+    <script>
+
+        //W Y S Z U K I WA N I E (tutaj w paragrafach p)
+
+        window.onload = function(){ //lista kompetencji do podniesienia
+          // var toDos = ["TypeScript", "HTML5", "JQuery", "BOOTSTRAP"];
+           //alert(toDos[2]); //jQuery
+           /*toDos[1] = "Xamarin"; //zmiana
+           toDos.push("AngularJS"); //dodanie
+           toDos.splice(1,1); //usuń od 1 indeksu 1 element
+           alert(toDos.sort());*/
+           
+          // var clone = toDos.slice(); //klonowanie tablicy
+         //  clone[0] = "JavaScript";
+
+        //   alert(toDos); //sklonowanie tablicy
+
+
+        //wyszukujemy wszystkie paragrafy "p"
+         //  alert(document.getElementsByTagName("p")[0].innerHTML); 
+
+      //  var paragraphs = document.getElementsByTagName("p"); //tutaj wyszukiwal wszystkie p
+            var paragraphs = document.querySelectorAll("#dTodos p") //tutaj wyszukuje wszsytkie p ale w divie dTodos
+        for(var i = 0; i < paragraphs.length; i++) {
+             if (paragraphs[i].innerHTML == "Mam pojecie") //2x == tj porownanie.
+              // paragraphs[i].style.color = "Green"; //zmienia nam wszystkie mam pojecie na zielono
+           // paragraphs[i].setAttribute("style", "color: red; font-weight: bold ") //niewygodne bo przy checi zmiany np koloru to trzeba w wielu miejscach 
+            paragraphs[i].setAttribute("class", "highlight-green"); //zmienia klase na podane w stylach kolory itd
+            
+        }; 
+
+        };    
+    </script>
+</head>
+
+<body>
+  <div>Add new todo  <input id="tToDo" type="text" /> </div>  
+  <div>Search todos  <input id="tSearchToDos" type="text" /> </div>  
+    
+  <div id="dTodos"> 
+  <p id="pResult">Nie mam pojecia</p>
+  <p id="pResult">Nie mam pojecia</p>
+  <p id="pResult">Mam pojecie</p>
+  <p id="pResult">Mam pojecie</p>
+</div>
+
+    <p id="pResult">Nie mam pojecia</p>
+    <p id="pResult">Nie mam pojecia</p>
+    <p id="pResult">Mam pojecie</p>
+    <p id="pResult">Mam pojecie</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+    <style>
+       
+    
+    </style>
+    <script>
+        window.onload = function(){ //lista kompetencji do podniesienia
+        var tNewTodo = document.getElementById("tTodo");
+        var tSearchTodos = document.getElementById("tSearchToDos");
+        var olTodos = document.getElementById("pTodos");
+            //jak klikniemy enter w add new todo -> to w alercie wyjdzie to co napisalismy
+            tNewTodo.onkeyup = function(event) {
+                if(event.keyCode ==13) { //kazdy klawisz na klawiaturze ma swoj kod liczbowy, www.keycode.info (13 to enter)
+                    alert(tNewTodo.value);
+                }
+            }
+        };    
+    </script>
+</head>
+
+<body>
+
+   
+
+  <div>Add new todo  <input id="tTodo" type="text" /> </div>  
+  <div>Search todos  <input id="tSearchToDos" type="text" /> </div>  
+    
+  <ol id="pTodos">
+
+
+
+  </ol>
+  
+</body>
+</html>
