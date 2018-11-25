@@ -1,0 +1,56 @@
+<html>
+
+<head>
+
+    <style>
+       .highlight{
+           border:2px solid orange; 
+       }
+    
+    </style>
+    <script>
+
+        //robimy liste z tego co wpiszemy w okienko add new todo
+        window.onload = function(){ //lista kompetencji do podniesienia
+        var tNewTodo = document.getElementById("tTodo");
+        var tSearchTodos = document.getElementById("tSearchToDos");
+        var olTodos = document.getElementById("olTodos");
+            //jak klikniemy enter w add new todo -> to w alercie wyjdzie to co napisalismy
+            tNewTodo.onkeyup = function(event) {
+               if(event.keyCode ==13) { //kazdy klawisz na klawiaturze ma swoj kod liczbowy, www.keycode.info (13 to enter)
+            
+            
+               
+              var newTodo = tNewTodo.value;
+              var liNewTodo = document.createElement("li");
+              var textNodeNewTodo = document.createTextNode(newTodo);
+              //dodajemy przycisk pozwalazjacy skasowanie tego co wpisalismy
+              var btnDeleteTodo = document.createElement("button");
+              var textNodeDeleteTodo = document.createTextNode("X");
+              btnDeleteTodo.appendChild(textNodeDeleteTodo);
+              btnDeleteTodo.setAttribute("onclick","alert('" + newTodo + "')");
+              liNewTodo.appendChild(btnDeleteTodo);
+              
+              liNewTodo.appendChild(textNodeNewTodo);
+                olTodos.appendChild(liNewTodo);
+
+
+               }                                        
+};
+        };    
+    </script>
+</head>
+
+<body>
+
+  <div>Add new todo  <input id="tTodo" type="text" /> </div>  
+  <div>Search todos  <input id="tSearchToDos" type="text" /> </div>  
+    
+  <ol id="olTodos">
+
+
+
+  </ol>
+  
+</body>
+</html>

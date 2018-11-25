@@ -3,7 +3,9 @@
 <head>
 
     <style>
-       
+       .highlight{
+           border:2px solid orange; 
+       }
     
     </style>
     <script>
@@ -13,17 +15,30 @@
         var olTodos = document.getElementById("pTodos");
             //jak klikniemy enter w add new todo -> to w alercie wyjdzie to co napisalismy
             tNewTodo.onkeyup = function(event) {
-                if(event.keyCode ==13) { //kazdy klawisz na klawiaturze ma swoj kod liczbowy, www.keycode.info (13 to enter)
-                    alert(tNewTodo.value);
-                }
+               if(event.keyCode ==13) { //kazdy klawisz na klawiaturze ma swoj kod liczbowy, www.keycode.info (13 to enter)
+                   alert(tNewTodo.value);
+               }
             }
+         
+            tNewTodo.onmouseover = function(light) {
+                    if(tNewTodo.value) {
+                        tNewTodo.value
+                    }
+                  else  {
+                      tNewTodo.classList.add("highlight");
+                  }
+            
+           tNewTodo.onmouseout = function(unlight) {
+               tNewTodo.classList.remove("highlight");
+}
+           }
+        
+
         };    
     </script>
 </head>
 
 <body>
-
-   
 
   <div>Add new todo  <input id="tTodo" type="text" /> </div>  
   <div>Search todos  <input id="tSearchToDos" type="text" /> </div>  
